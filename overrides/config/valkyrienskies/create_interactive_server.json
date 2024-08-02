@@ -1,9 +1,0 @@
-{
-  "enableInteractMeBlock" : true,
-  "enableTranslating" : true,
-  "enableTrain" : true,
-  "enableBearing" : true,
-  "enableClockwork" : true,
-  "enableMounted" : true,
-  "$schema" : "schemas/create_interactive_server.schema.json"
-}

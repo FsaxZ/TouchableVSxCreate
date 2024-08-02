@@ -1,4 +1,0 @@
-{
-  "maxConfig" : 1,
-  "$schema" : "schemas/create_interactive_client.schema.json"
-}
