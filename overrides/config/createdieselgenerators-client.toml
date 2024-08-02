@@ -1,0 +1,7 @@
+["Client Configs"]
+	#Whenever Diesel Engines display in JEI
+	"Diesel Engine JEI Config" = true
+	#Fuel type tooltip on Buckets
+	"Fuel tooltips" = true
+	#Diesel Engines emit sounds on trains
+	"Diesel Engines emit sounds on trains" = true

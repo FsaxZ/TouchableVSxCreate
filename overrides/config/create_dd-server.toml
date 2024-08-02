@@ -1,0 +1,183 @@
+#.
+#Parameters and abilities of Create: Dreams n' Desire's kinetic mechanisms
+[kinetics]
+	#.
+	#.
+	#multiplier used for calculating exhaustion from speed when a crank is turned.
+	#Range: 0.0 ~ 1.0
+	crankHungerMultiplier = 0.009999999776482582
+
+	#.
+	#Industrial Fan
+	[kinetics.industrialFan]
+		#.
+		#Maximum distance in blocks Fans can push entities.
+		#Range: > 5
+		fanPushDistance = 30
+		#.
+		#Game ticks between Fans checking for anything blocking their air flow.
+		#Range: > 10
+		fanBlockCheckRate = 30
+		#.
+		#Game ticks required for a Fan-based processing recipe to take effect.
+		#Range: > 0
+		fanProcessingTime = 75
+		#.
+		#[in Revolutions per Minute]
+		#Rotation speed at which the maximum stats of fans are reached.
+		#Range: > 64
+		fanRotationArgmax = 256
+		#.
+		#Maximum distance in blocks from where Fans can pull entities.
+		#Range: > 5
+		fanPullDistance = 30
+	#.
+	#Radiant/Shadow Panels
+	[kinetics.RSPanels]
+		#.
+		#Sunset Min Time
+		#Range: 0 ~ 24000
+		sunset_min_time = 8000
+		#.
+		#Day Min Time
+		#Range: 0 ~ 24000
+		day_min_time = 0
+		#.
+		#Night Max Time
+		#Range: 0 ~ 24000
+		night_max_time = 16000
+		#.
+		#Midnight Min Time
+		#Range: 0 ~ 24000
+		midnight_min_time = 16000
+		#.
+		#Panels Max Height
+		#Range: > 10
+		PanelMAXHeight = 10
+		#.
+		#Noon Max Time
+		#Range: 0 ~ 24000
+		noon_max_time = 8000
+		#.
+		#Sunrise Min Time
+		#Range: 0 ~ 24000
+		sunrise_min_time = 20000
+		#.
+		#Night Min Time
+		#Range: 0 ~ 24000
+		night_min_time = 12000
+		#.
+		#Sunrise Max Time
+		#Range: 0 ~ 24000
+		sunrise_max_time = 24000
+		#.
+		#Game ticks checking for Panels updating there Generated Rotation.
+		#Range: > 10
+		PanelBlockCheckRate = 10
+		#.
+		#Day Max Time
+		#Range: 0 ~ 24000
+		day_max_time = 4000
+		#.
+		#Sunset Max Time
+		#Range: 0 ~ 24000
+		sunset_max_time = 12000
+		#.
+		#Noon Min Time
+		#Range: 0 ~ 24000
+		noon_min_time = 4000
+		#.
+		#Midnight Max Time
+		#Range: 0 ~ 24000
+		midnight_max_time = 20000
+	[kinetics.stressValues]
+		#.
+		#Fine tune the kinetic stats of individual components
+		[kinetics.stressValues.v2]
+			#.
+			#.
+			#[in Stress Units]
+			#Configure the individual stress impact of mechanical blocks. Note that this cost is doubled for every speed increase it receives.
+			[kinetics.stressValues.v2.impact]
+				4_blade_fan = 0.0
+				2_blade_fan = 0.0
+				bronze_drill = 12.0
+				industrial_fan = 4.0
+				hydraulic_press = 32.0
+				potato_turret = 2.0
+				8_blade_fan = 0.0
+				bronze_saw = 12.0
+				secondary_encased_chain_drive = 0.0
+				flywheel = 0.0
+				shadow_drill = 16.0
+				radiant_drill = 16.0
+				secondary_adjustable_chain_gearshift = 0.0
+			#.
+			#[in Stress Units]
+			#Configure how much stress a source can accommodate for.
+			[kinetics.stressValues.v2.capacity]
+				furnace_engine = 341.5
+				cog_crank = 8.0
+				accelerator_motor = 0.0
+				kinetic_motor = 1.5
+				industrial_fan = 16.0
+#.
+#Recipes
+[recipes]
+	#.
+	#.
+	#Allow the Hydraulic Press to process entire stacks at a time.
+	bulkPressing = true
+	#.
+	#Allow the Bronze Saw to process entire stacks at a time.
+	bulkCutting = true
+	#.
+	#Allow any stonecutting recipes to be processed by a Bronze Saw.
+	allowStonecuttingOnSaw = true
+	#.
+	#Allow any Druidcraft woodcutter recipes to be processed by a Bronze Saw.
+	allowWoodcuttingOnSaw = true
+
+	#.
+	#Compound Recipes
+	[recipes.recipe]
+		#.
+		#Shadow Steel Recipe Require Min Height
+		#Range: -2048 ~ 2048
+		shadow_steel_min_height = -10
+		#.
+		#Refined Radiance Recipe
+		refined_radiance_recipe = true
+		#.
+		#Stargaze Recipe Require Min of Max Height Division
+		#Range: -256.0 ~ 256.0
+		stargaze_singularity_max_height_division = 1.25
+		#.
+		#Shadow Steel Recipe Require Min Height
+		#Range: -2048 ~ 2048
+		refined_radiance_min_height = -32
+		#.
+		#Stargaze Recipe Require Max Time
+		#Range: 0 ~ 24000
+		stargaze_singularity_max_time = 20000
+		#.
+		#Stargaze Recipe
+		stargaze_singularity_recipe = true
+		#.
+		#Blaze Brass Recipe
+		blaze_gold_recipe = true
+		#.
+		#Stargaze Recipe Require Min Time
+		#Range: 0 ~ 24000
+		stargaze_singularity_min_time = 16000
+		#.
+		#Shadow Steel Recipe Require Light Level
+		#Range: 0 ~ 15
+		refined_radiance_light_level = 15
+		#.
+		#Shadow Steel Recipe
+		shadow_steel_recipe = true
+		#.
+		#Shadow Steel Recipe Require Max Height
+		#Range: -2048 ~ 2048
+		refined_radiance_max_height = 319
